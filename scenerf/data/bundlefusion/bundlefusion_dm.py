@@ -4,7 +4,7 @@ from scenerf.data.bundlefusion.collate import collate_fn
 import pytorch_lightning as pl
 from scenerf.data.utils.torch_util import worker_init_fn
 
-
+# 使用LightningDataModule组织和配置 BundleFusion 数据集加载，创建了训练和验证数据集，并使用DataLoader来生成加载器
 class BundlefusionDM(pl.LightningDataModule):
     def __init__(
         self,
