@@ -3,7 +3,7 @@ import scenerf.data.utils.fusion as fusion
 import open3d as o3d
 from PIL import Image
 
-
+# 涉及与点云相关的许多操作，包括点云的变换、配准和投影。它还包含一些用于读取RGB图像、相机位姿和相机标定的功能
 def make_open3d_point_cloud(xyz, color=None):
     pcd = o3d.geometry.PointCloud()
     pcd.points = o3d.utility.Vector3dVector(xyz)
