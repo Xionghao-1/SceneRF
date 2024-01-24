@@ -4,7 +4,7 @@ Code taken from https://github.com/sxyu/pixel-nerf/blob/91a044bdd62aebe0ed3a5685
 import torch
 import numpy as np
 
-
+# 实现了 NeRF 模型的位置编码（Positional Encoding）。位置编码被用于将输入坐标转化为具有频域信息(频率、相位、正弦)的表示，以更好地捕捉不同方向上的细节
 class PositionalEncoding(torch.nn.Module):
     """
     Implement NeRF's positional encoding
