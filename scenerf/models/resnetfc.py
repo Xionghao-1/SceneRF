@@ -1,4 +1,4 @@
-"""
+"""  # 定义了一个可配置的 ResNet 结构的全连接神经网络，用于场景渲染等任务
 Code adapted from https://github.com/sxyu/pixel-nerf/blob/master/src/model/resnetfc.py
 """
 from torch import nn
