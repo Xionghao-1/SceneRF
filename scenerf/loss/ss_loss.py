@@ -1,5 +1,5 @@
 import torch
-
+# ss(emantic Segmentation)
 # 计算满足predicted_depth的样本与目标值的绝对差值（l1_loss）
 def compute_l1_loss(pred, target, predicted_depth=None):
     """
