@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-class BasicBlock(nn.Module):
+class BasicBlock(nn.Module):  # 定义了 UNet 模型中的基本块，包含两个卷积块和一个残差连接。使用了带有扩张的卷积，激活函数为 Leaky ReLU
     def __init__(self, channel_num, dilations):
         super(BasicBlock, self).__init__()
 
@@ -34,7 +34,7 @@ class BasicBlock(nn.Module):
         return out
 
 
-class UpSampleBN(nn.Module):
+class UpSampleBN(nn.Module):  # 定义了上采样块，用于将特征图上采样。包含一个卷积层和几个 BasicBlock
     def __init__(self, skip_input, output_features):
         super(UpSampleBN, self).__init__()
         self._net = nn.Sequential(
@@ -56,7 +56,7 @@ class UpSampleBN(nn.Module):
         return self._net(f)
 
 
-class DecoderSphere(nn.Module):
+class DecoderSphere(nn.Module):  # 定义了 UNet 模型的解码器部分，用于从提取的特征图中生成场景重建结果。包含了几个上采样块
     def __init__(
         self,
         num_features,
@@ -206,7 +206,7 @@ class DecoderSphere(nn.Module):
         }
 
 
-class Encoder(nn.Module):
+class Encoder(nn.Module):  # 定义了 UNet 模型的编码器部分，负责提取输入图像的特征。通过遍历模型的各个层，逐层提取特征
     def __init__(self, backend):
         super(Encoder, self).__init__()
         self.original_model = backend
@@ -222,7 +222,7 @@ class Encoder(nn.Module):
         return features
 
 
-class UNet2DSphere(nn.Module):
+class UNet2DSphere(nn.Module):  # 将编码器和解码器组合在一起形成完整的 UNet 模型。通过调用编码器提取特征，然后将这些特征传递给解码器生成场景重建结果
     def __init__(self, backend, num_features, out_feature, out_img_H, out_img_W):
         super(UNet2DSphere, self).__init__()
         self.encoder = Encoder(backend)
