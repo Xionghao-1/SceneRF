@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import math
-
+# 实现了一个叫做 RaySOM（Ray Self-Organizing Map）的神经网络模型，主要用于光线场景中的自组织映射，通过最小化 KL 散度来调整均值和标准差，以使模型能够更好地适应输入数据
 class RaySOM(nn.Module):
     def __init__(self, som_sigma):
         super(RaySOM, self).__init__()
