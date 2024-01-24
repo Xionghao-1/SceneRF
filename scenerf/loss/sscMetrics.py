@@ -2,7 +2,7 @@
 Part of the code is taken from https://github.com/waterljwant/SSC/blob/master/sscMetrics.py
 """
 import numpy as np
-
+# Semantic Segmentation (Scene) Completion
 def get_iou(iou_sum, cnt_class):
     _C = iou_sum.shape[0]  # 12
     iou = np.zeros(_C, dtype=np.float32)  # iou for each class
