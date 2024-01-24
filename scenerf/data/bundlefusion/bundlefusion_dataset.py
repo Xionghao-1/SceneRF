@@ -9,7 +9,7 @@ import torch.nn.functional as F
 from tqdm import tqdm
 import imageio
 
-
+# 处理BundleFution数据集，并读取相机参数、读取位姿信息、读取图像等功能，并提供了数据预处理的一些变换，打印错误帧（error_frames）
 class BundlefusionDataset(Dataset):
     def __init__(
         self,
