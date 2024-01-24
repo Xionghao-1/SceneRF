@@ -1,7 +1,7 @@
 """
 Most of the code in this file is taken from https://github.com/cv-rits/LMSCNet/blob/main/LMSCNet/data/io_data.py
 """
-
+# 模块包含了一系列用于读取、解析、处理 SemanticKITTI 数据集的函数
 import numpy as np
 import yaml
 import imageio
