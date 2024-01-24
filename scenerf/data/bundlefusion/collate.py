@@ -2,7 +2,7 @@ import torch
 import numpy as np
 import pdb
 
-
+# 一些data整理
 def collate_fn(batch):
 
     img_inputs = []
