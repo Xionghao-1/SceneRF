@@ -1,5 +1,5 @@
 import numpy as np
-
+# 计算预测深度与地面实际深度之间的误差指标
 def compute_depth_errors(gt, pred, min_depth=1e-3, max_depth=80):
     """Computation of error metrics between predicted and ground truth depths
     """
