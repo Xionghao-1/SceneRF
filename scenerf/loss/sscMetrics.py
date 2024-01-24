@@ -1,4 +1,4 @@
-"""
+"""  # 包含了一系列计算语义分割和场景补全任务评估指标的函数。这些指标包括像素准确度、交并比（IoU）、平均交并比（mIoU）等
 Part of the code is taken from https://github.com/waterljwant/SSC/blob/master/sscMetrics.py
 """
 import numpy as np
