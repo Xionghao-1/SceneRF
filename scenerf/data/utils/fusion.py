@@ -1,4 +1,4 @@
-"""
+"""  # 基于RGB-D图像的体积式TSDF融合。这种技术通常用于三维重建应用，将多个深度图帧的信息融合成体积表示。
 Code adapted from https://github.com/andyzeng/tsdf-fusion-python/blob/master/fusion.py
 """
 import numpy as np
